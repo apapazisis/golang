@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+    app:
+        build: ./
+        ports:
+            - 8010:4000
+        tty: true
+        restart: always
+        volumes:
+            - ./app:/go/app
+        working_dir: /go/app/cmd/web
